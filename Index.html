@@ -1,0 +1,238 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes">	
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.1/dist/mindar-image-aframe.prod.js"></script>
+    
+  </head>
+  <script>
+        AFRAME.registerComponent("video-controller0", {
+            init: function () {
+                const target = document.getElementById("target0");
+                const btn = document.querySelector("button");
+                const video0 = document.getElementById("AlexaAppartVideo");
+
+                // detect target found
+                target.addEventListener("targetFound", event => {
+                    console.log("target found");
+                    this.found = true;
+                    video0.play();
+                });
+                // detect target lost
+                target.addEventListener("targetLost", event => {
+                    console.log("target lost");
+                    this.found = false
+                    video0.pause();
+                });
+            }
+        })
+		
+		AFRAME.registerComponent("video-controller1", {
+            init: function () {
+                const target = document.getElementById("target1");
+                const btn = document.querySelector("button");
+                const video1 = document.getElementById("AlexaRoadVideo");
+
+                // detect target found
+                target.addEventListener("targetFound", event => {
+                    console.log("target found");
+                    this.found = true;
+                    video1.play();
+                });
+                // detect target lost
+                target.addEventListener("targetLost", event => {
+                    console.log("target lost");
+                    this.found = false
+                    video1.pause();
+                });
+            }
+        })
+		
+		AFRAME.registerComponent("video-controller2", {
+            init: function () {
+                const target = document.getElementById("target2");
+                const btn = document.querySelector("button");
+                const video2 = document.getElementById("CrocoVideo");
+
+                // detect target found
+                target.addEventListener("targetFound", event => {
+                    console.log("target found");
+                    this.found = true;
+                    video2.play();
+                });
+                // detect target lost
+                target.addEventListener("targetLost", event => {
+                    console.log("target lost");
+                    this.found = false
+                    video2.pause();
+                });
+            }
+        })
+		
+		AFRAME.registerComponent("video-controller3", {
+            init: function () {
+                const target = document.getElementById("target3");
+                const btn = document.querySelector("button");
+                const video3 = document.getElementById("Cyberpunk2077Video");
+
+                // detect target found
+                target.addEventListener("targetFound", event => {
+                    console.log("target found");
+                    this.found = true;
+                    video3.play();
+                });
+                // detect target lost
+                target.addEventListener("targetLost", event => {
+                    console.log("target lost");
+                    this.found = false
+                    video3.pause();
+                });
+            }
+        })
+		
+		AFRAME.registerComponent("video-controller4", {
+            init: function () {
+                const target = document.getElementById("target4");
+                const btn = document.querySelector("button");
+                const video4 = document.getElementById("PorcelaineSynthVideo");
+
+                // detect target found
+                target.addEventListener("targetFound", event => {
+                    console.log("target found");
+                    this.found = true;
+                    video4.play();
+                });
+                // detect target lost
+                target.addEventListener("targetLost", event => {
+                    console.log("target lost");
+                    this.found = false
+                    video4.pause();
+                });
+            }
+        })
+		
+		AFRAME.registerComponent("video-controller5", {
+            init: function () {
+                const target = document.getElementById("target5");
+                const btn = document.querySelector("button");
+                const video5 = document.getElementById("RaphChaseVideo");
+
+                // detect target found
+                target.addEventListener("targetFound", event => {
+                    console.log("target found");
+                    this.found = true;
+                    video5.play();
+                });
+                // detect target lost
+                target.addEventListener("targetLost", event => {
+                    console.log("target lost");
+                    this.found = false
+                    video5.pause();
+                });
+            }
+        })
+		
+		AFRAME.registerComponent("video-controller6", {
+            init: function () {
+                const target = document.getElementById("target6");
+                const btn = document.querySelector("button");
+                const video6 = document.getElementById("RaphCoffeeVideo");
+
+                // detect target found
+                target.addEventListener("targetFound", event => {
+                    console.log("target found");
+                    this.found = true;
+                    video6.play();
+                });
+                // detect target lost
+                target.addEventListener("targetLost", event => {
+                    console.log("target lost");
+                    this.found = false
+                    video6.pause();
+                });
+            }
+        })
+		
+		AFRAME.registerComponent("video-controller7", {
+            init: function () {
+                const target = document.getElementById("target7");
+                const btn = document.querySelector("button");
+                const video7 = document.getElementById("ToVVideo");
+
+                // detect target found
+                target.addEventListener("targetFound", event => {
+                    console.log("target found");
+                    this.found = true;
+                    video7.play();
+                });
+                // detect target lost
+                target.addEventListener("targetLost", event => {
+                    console.log("target lost");
+                    this.found = false
+                    video7.pause();
+                });
+            }
+        })
+
+    </script>
+  <body>
+    <!-- <div style="position: fixed; top: 10px; width: 100%; text-align: center; z-index: 1; color: grey">
+        <button>Play video</button> - if the plane is black on mobile.
+    </div> -->
+    <a-scene mindar-image="imageTargetSrc: ./targets4.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+      <a-assets>.
+        <video id="AlexaAppartVideo" src="./Alexa_PinkSnow01_30sec.mp4" preload loop></video>
+		<video id="AlexaRoadVideo" src="./Alexa_PinkSnow02_30sec.mp4" preload loop></video>
+		<video id="CrocoVideo" src="./Crocos.mp4" preload loop></video>
+		<video id="Cyberpunk2077Video" src="./Cyberpunk2077.mp4" preload loop></video>
+		<video id="PorcelaineSynthVideo" src="./PorcelaineSynthwave_Animation_PorcelaineSynthwave_Animation.mp4" preload loop></video>
+		<video id="RaphChaseVideo" src="./RaphGagnon_AnimationIllustration01.mp4" preload loop></video>
+		<video id="RaphCoffeeVideo" src="./RaphGagnon_AnimationIllustration02.mp4" preload loop></video>
+		<video id="ToVVideo" src="./TwoVOrNotToV.mp4" preload loop></video>
+      </a-assets>
+      <a-entity mindar-image-target="targetIndex: 0" id="target0">
+        <a-plane class="clickable" material="src: #AlexaAppartVideo; opacity: 1; transparent: false" geometry="width: 1; height: 1.3" video-controller0>
+        </a-plane>
+      </a-entity>
+	  
+	  <a-entity mindar-image-target="targetIndex: 1" id="target1">
+        <a-plane class="clickable" material="src: #AlexaRoadVideo; opacity: 1; transparent: false" geometry="width: 1; height: 1.3" video-controller1>
+        </a-plane>
+      </a-entity>
+	  
+	  <a-entity mindar-image-target="targetIndex: 2" id="target2">
+        <a-plane class="clickable" material="src: #CrocoVideo; opacity: 1; transparent: false" geometry="width: 1; height: 1.4" video-controller2>
+        </a-plane>
+      </a-entity>
+	  
+	  <a-entity mindar-image-target="targetIndex: 3" id="target3">
+        <a-plane class="clickable" material="src: #Cyberpunk2077Video; opacity: 1; transparent: false" geometry="width: 1; height: 1.3" video-controller3>
+        </a-plane>
+      </a-entity>
+	  
+	  <a-entity mindar-image-target="targetIndex: 4" id="target4">
+        <a-plane class="clickable" material="src: #PorcelaineSynthVideo; opacity: 1; transparent: false" geometry="width: 1; height: 1.3" video-controller4>
+        </a-plane>
+      </a-entity>
+	  
+	  <a-entity mindar-image-target="targetIndex: 5" id="target5">
+        <a-plane class="clickable" material="src: #RaphChaseVideo; opacity: 1; transparent: false" geometry="width: 1.5; height: 1" video-controller5>
+        </a-plane>
+      </a-entity>
+	  
+	  <a-entity mindar-image-target="targetIndex: 6" id="target6">
+        <a-plane class="clickable" material="src: #RaphCoffeeVideo; opacity: 1; transparent: false" geometry="width: 1.5; height: 1" video-controller6>
+        </a-plane>
+      </a-entity>
+	  
+	  <a-entity mindar-image-target="targetIndex: 7" id="target7">
+        <a-plane class="clickable" material="src: #ToVVideo; opacity: 1; transparent: false" geometry="width: 1; height: 1.3" video-controller7>
+        </a-plane>
+      </a-entity>
+	  
+    </a-scene>
+   
+  </body>
+</html>
